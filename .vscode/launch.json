@@ -1,0 +1,36 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "[makemore] Train (transformer)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${fileDirname}/makemore.py",
+            "python": "/Users/rpullaka/miniconda3/envs/makemore/bin/python",
+            "args": [
+                "--input-file", "names.txt",
+                "--work-dir", "out",
+                "--num-workers", "0",
+                "--max-steps", "500"
+            ],
+            "cwd": "${fileDirname}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "[makemore] Sample only (resume from out/model.pt)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${fileDirname}/makemore.py",
+            "python": "/Users/rpullaka/miniconda3/envs/makemore/bin/python",
+            "args": [
+                "--input-file", "names.txt",
+                "--work-dir", "out",
+                "--sample-only"
+            ],
+            "cwd": "${fileDirname}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}
